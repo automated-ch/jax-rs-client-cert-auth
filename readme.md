@@ -35,7 +35,7 @@ List all certificate in the servers keystore:
 ## setup in web.xml
 the common name of the certificate should match the principal name 
 
-'<principal-name>linux-utr6-client</principal-name>'
+`<principal-name>linux-utr6-client</principal-name>`
 
 results from following CN value in your above created certificate:
 
