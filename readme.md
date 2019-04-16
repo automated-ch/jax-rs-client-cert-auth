@@ -12,7 +12,7 @@ client_keystore.p12
 
 After that we will export the client cert to a file called client_keystore.cer
 
-`keytool -export -alias linux-utr-client -keystore clientCert_1.p12 -storetype PKCS12 -storepass changeit -rfc -file client_keystore.cer`
+`keytool -export -alias linux-utr-client -keystore client_keystore.p12 -storetype PKCS12 -storepass changeit -rfc -file client_keystore.cer`
 
 ##Install the client certificate in payara server
 Important note: to make this example work properly on payara 4.1.2.181 you need to ad the manager group to the certificate realm in the servers admin console.
@@ -23,7 +23,7 @@ backup following files:
 
 import client.cer to the payara truststore:
 
-`keytool -import -v -trustcacerts -alias client-alias -file client.cer -keystore /data/dev/payara5/glassfish/domains/domain1/config/cacerts.jks -keypass changeit -storepass changeit`
+`keytool -import -v -trustcacerts -alias client-alias -file client_keystore.cer -keystore /data/dev/payara5/glassfish/domains/domain1/config/cacerts.jks -keypass changeit -storepass changeit`
 
 List all certificate in the servers keystore:
 
