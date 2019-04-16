@@ -8,7 +8,7 @@ This project demonstrates how to setup a jax-rs webservice to which the clients 
 
 after this you should have the following file in the directory where the above command was executed.
 
-client_keystore.p12
+`client_keystore.p12`
 
 After that we will export the client cert to a file called client_keystore.cer
 
