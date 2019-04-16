@@ -6,7 +6,7 @@ This project demonstrates how to setup a jax-rs webservice to which the clients 
 
 `keytool -genkey -v -alias linux-utr-client -keyalg RSA -storetype PKCS12 -keystore client_keystore.p12 -storepass changeit -keypass changeit`
 
-after this you should have the folloing file in the directory where the above command was executed.
+after this you should have the following file in the directory where the above command was executed.
 
 client_keystore.p12
 
@@ -14,7 +14,7 @@ After that we will export the client cert to a file called client_keystore.cer
 
 `keytool -export -alias linux-utr-client -keystore client_keystore.p12 -storetype PKCS12 -storepass changeit -rfc -file client_keystore.cer`
 
-##Install the client certificate in payara server
+## Install the client certificate in payara server
 Important note: to make this example work properly on payara 4.1.2.181 you need to ad the manager group to the certificate realm in the servers admin console.
 
 backup following files:
@@ -33,7 +33,13 @@ List all certificate in the servers keystore:
 
 
 ## setup in web.xml
-the common name of the certificate should match the principal name
+the common name of the certificate should match the principal name 
+
+'<principal-name>linux-utr6-client</principal-name>'
+
+results from following CN value in your above created certificate:
+
+`CN=linux-utr6-client`
 
 ### references
 https://docs.oracle.com/javaee/7/tutorial/security-advanced002.htm
