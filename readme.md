@@ -23,7 +23,7 @@ backup following files:
 
 import client.cer to the payara truststore:
 
-`keytool -import -v -trustcacerts -alias client-alias -file client_keystore.cer -keystore /data/dev/payara5/glassfish/domains/domain1/config/cacerts.jks -keypass changeit -storepass changeit`
+`keytool -import -v -trustcacerts -alias linux-utr-client -file client_keystore.cer -keystore /data/dev/payara5/glassfish/domains/domain1/config/cacerts.jks -keypass changeit -storepass changeit`
 
 List all certificate in the servers keystore:
 
@@ -35,7 +35,7 @@ List all certificate in the servers keystore:
 ## setup in web.xml
 the common name of the certificate should match the principal name 
 
-`<principal-name>linux-utr6-client</principal-name>`
+`<principal-name>linux-utr-client</principal-name>`
 
 results from following CN value in your above created certificate:
 
