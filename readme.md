@@ -39,7 +39,7 @@ the common name of the certificate should match the principal name
 
 results from following CN value in your above created certificate:
 
-`CN=linux-utr6-client`
+`CN=linux-utr-client`
 
 ### references
 https://docs.oracle.com/javaee/7/tutorial/security-advanced002.htm
